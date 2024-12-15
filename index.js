@@ -12,9 +12,9 @@ const PORT = 5000;
 app.use(cors());
 
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  cloud_name: "doqxxfepp",
+  api_key: "549158954519564",
+  api_secret: "_GJkzJRCfBpJ6g7-fx3Sw-AB3NA",
 });
 
 const storage = new CloudinaryStorage({
