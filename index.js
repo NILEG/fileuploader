@@ -3,16 +3,18 @@ const multer = require("multer");
 const cors = require("cors");
 const { v2: cloudinary } = require("cloudinary");
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const dotenv = require("dotenv");
 
+dotenv.config();
 const app = express();
 const PORT = 5000;
 
 app.use(cors());
 
 cloudinary.config({
-  cloud_name: "doqxxfepp",
-  api_key: "549158954519564",
-  api_secret: "_GJkzJRCfBpJ6g7-fx3Sw-AB3NA",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 const storage = new CloudinaryStorage({
